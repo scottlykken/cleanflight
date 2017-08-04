@@ -94,7 +94,15 @@
 #define SONAR_ECHO_PIN          PB1
 
 #elif defined(RMDO)
-#undef USE_GPS
+#define GPS
+
+#define MAG
+#define USE_MAG_HMC5883
+#define MAG_HMC5883_ALIGN       CW270_DEG
+
+#define USE_MAG_DATA_READY_SIGNAL
+#define ENSURE_MAG_DATA_READY_IS_HIGH
+#define MAG_INT_EXTI            PC14
 
 #elif defined(ZCOREF3)
 #define USE_MAG_DATA_READY_SIGNAL
